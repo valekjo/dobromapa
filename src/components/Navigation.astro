@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getUrl } from '../utils';
+
+const itemCls = "px-3 py-3";
+---
+<nav class="w-full border-primary-800 text-primary-800 text-sm font-medium border-b-1 py-2">
+    <div class="js-nav-links hidden flex flex-col sm:flex-row sm:flex sm:mx-auto sm:w-3/4 sm:max-w-256 sm:gap-1">
+        <a class={itemCls} href={getUrl('/')}>Dobromapa</a>
+        <a class={itemCls} href={getUrl("/regions")}>Lokální projekty</a>
+        <a class={itemCls} href={getUrl("/about")}>O projektu</a>
+        <a class="px-3 py-2 sm:ml-auto" href="https://github.com/valekjo/dobromapa" target="_blank">
+            <span class="sm:hidden">GitHub</span>
+            <Icon name="mdi:github" size="24" class="hidden sm:block"/>
+        </a>
+    </div>
+    <div class="flex mx-4 place-content-end sm:hidden">
+        <button class="js-hamburger">
+            <Icon name="mdi:menu" size="32" class="js-icon-hamburger"/>
+            <Icon name="mdi:close" size="32" class="js-icon-close hidden"/>
+        </button>
+    </div>
+</nav>
+
+<script>
+    document.querySelector('.js-hamburger')?.addEventListener('click', () => {
+      document.querySelector('.js-nav-links')?.classList.toggle('hidden');
+      document.querySelector('.js-icon-close')?.classList.toggle('hidden');
+      document.querySelector('.js-icon-hamburger')?.classList.toggle('hidden');
+    });
+</script>

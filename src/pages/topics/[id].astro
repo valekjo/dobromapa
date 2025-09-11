@@ -1,0 +1,27 @@
+---
+import { getCollection, render, getEntries } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Prose from '../../components/Prose.astro';
+import ProjectList from '../../components/ProjectList.astro';
+
+export async function getStaticPaths() {
+  const topics = await getCollection('topics');
+  return topics.map(topic => ({
+    params: { id: topic.id },
+    props: { topic },
+  }));
+}
+
+const { topic } = Astro.props;
+
+const { Content } = await render(topic);
+---
+
+<Layout title={topic.data.name}>
+    <h1 class="text-3xl mt-12 mb-10 font-semibold">{topic.data.name}</h1>
+    <Prose>
+        <Content />
+    </Prose>
+    <h2 class="text-2xl mt-12 mb-8 font-semibold">Projekty</h2>
+    <ProjectList topic={topic.id} showPerex/>
+</Layout>

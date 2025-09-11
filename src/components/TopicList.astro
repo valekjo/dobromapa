@@ -1,0 +1,15 @@
+---
+import { getCollection } from 'astro:content';
+import { Icon } from 'astro-icon/components';
+import { getUrl } from '../utils';
+
+// Get all entries from a collection.
+// Requires the name of the collection as an argument.
+const topics = await getCollection('topics');
+---
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+    {topics.map(topic => <a href={getUrl(`/topics/${topic.id}`)} class={`py-10 rounded-md text-center text-xl shadow-lg hover:shadow-xl transition-shadow border-1 border-slate-200 flex flex-col items-center`}>
+        <Icon name={topic.data.icon} size="32" class="text-primary-700 mb-3"/>
+        {topic.data.name}
+    </a>)}
+</div>

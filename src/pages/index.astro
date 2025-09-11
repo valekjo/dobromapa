@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import TopicList from '../components/TopicList.astro';
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { getUrl } from '../utils';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const projects = await getCollection('projects');
 ---
 
 <Layout>
-	<Welcome />
+	<h1 class="text-4xl sm:text-6xl my-12 sm:my-20 font-semibold">Dobro<span class="text-primary-600">mapa</span></h1>
+	<p class="text-lg/8 sm:text-xl/10">
+		Jako společnost máme spoustu problémů. Vnímáme to a nejsme k tomu lhostejní. Často nám ale chybí naděje.
+		Jedním z důvodů je, že nevidíme, co všechno dobráho kolem nás už děje.
+	</p>
+	<p class="mt-16 text-xl/10 sm:text-3xl/15 not-italic">Vytváříme <span class="text-primary-600 font-semibold">mapu občanské společnosti</span> v České republice. Je <span class="text-primary-600 font-semibold">pestřejší</span>, než si myslíme.</p>
+	<h2 class="text-2xl sm:text-4xl mt-18 sm:mt-24 mb-12 font-semibold">Témata</h2>
+	<TopicList />
+	<h2 class="text-2xl sm:text-4xl mt-18 sm:mt-24 mb-12 font-semibold">Projekty</h2>
+	<div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+		{projects.map(project => (
+			<a href={getUrl(`/projects/${project.id}`)}>
+			{project.data.image
+				? <Image src={project.data.image} alt={project.data.name} class="h-12 w-24 object-contain"/>
+				: project.data.name}
+			</a>
+		))}
+	</div>
 </Layout>

@@ -1,46 +1,21 @@
-# Astro Starter Kit: Basics
+# Dobromapa (Work In Progress)
 
-```sh
-npm create astro@latest -- --template basics
-```
+Preview: [https://valekjo.github.io/dobromapa/](https://valekjo.github.io/dobromapa/)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+ > Přehled projektů, které mění Česko k lepšímu
 
-## 🚀 Project Structure
+## Navrhovaná struktura
 
-Inside of your Astro project, you'll see the following folders and files:
+Projekty setříděné podle témat, jeden projekt se může týkat i více témat.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+Témata nejsou úplně vycucaná z prstu, ale rozhodně to bude jedna z důležitých věcí ke zvážení a k diskuzi.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Projekty jsou "náhodně" vybrané, s minimálním popisem, jen na ukázku.
 
-## 🧞 Commands
+Jediný lokální projekt je tam vymyšlený - jen aby bylo něco na mapě.
 
-All commands are run from the root of the project, from a terminal:
+### Tech stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Cesta minimálního odporu - základní šablona pro [Astrojs](https://docs.astro.build) + [tailwind](https://tailwindcss.com/).
 
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Ikony k dispozici: https://icon-sets.iconify.design/mdi/?icon-filter=tree&keyword=material

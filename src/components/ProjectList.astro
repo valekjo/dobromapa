@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { getUrl } from '../utils';
+
+const { topic } = Astro.props;
+
+
+const projects = await getCollection(
+    'projects',
+    ({data}) => data.topics.some(({id}) => id === topic),
+);
+
+---
+<div>
+    {projects.map(project => (
+        <a href={getUrl(`/projects/${project.id}`)} class="flex gap-12 my-4 items-center">
+        {project.data.image
+            ? <Image src={project.data.image} alt={project.data.name} class="h-16 w-32 object-contain"/>
+            : project.data.name}
+        <span>{project.data.perex}</span>
+        </a>
+    ))}
+</div>

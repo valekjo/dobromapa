@@ -1,0 +1,10 @@
+---
+import Layout from "./Layout.astro";
+import Prose from "../components/Prose.astro";
+---
+<Layout {...Astro.props}>
+	<slot slot="header" name="header" />
+	<Prose>
+		<slot />
+	</Prose>
+</Layout>

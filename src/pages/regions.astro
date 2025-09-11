@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from  '../layouts/Layout.astro'
+
+const projects = (await getCollection('projects', ({data}) => !!data.location))
+    .map(({id, data}) => ({
+        id,
+        name: data.name,
+        location: data.location,
+        perex: data.perex,
+    }))
+---
+
+<Layout wrapperClass="w-full">
+    <!-- There is some issue with css loaded locally, so we load them from CDN -->
+    <Fragment slot="header">
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""/>
+    </Fragment>
+    <div id="map" class="h-[calc(100vh-10rem)]" data-projects={JSON.stringify(projects)}></div>
+</Layout>
+
+<script>
+    import Leaflet from 'leaflet';
+    import { getUrl } from '../utils';
+
+    const mapElem = document.getElementById('map')!
+    const projects = JSON.parse(mapElem.dataset.projects!);
+
+    console.log('Projects', projects)
+
+    const map = Leaflet.map(mapElem, { })
+    .addLayer(new Leaflet.TileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }))
+    .setView([49.5835494, 15.6341414], 7);
+
+    projects.forEach(({id, name, location, perex}: {id: string, name: string, location: [number, number], perex: string}) => {
+        const url = getUrl(`/projects/${id}`);
+        const popup = `<a href="${url}" class="text-sm block">${name}</a><div>${perex}</div>`
+        Leaflet.marker(location).addTo(map).bindPopup(popup);
+    });
+
+</script>
