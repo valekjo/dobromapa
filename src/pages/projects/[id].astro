@@ -1,5 +1,5 @@
 ---
-import { getCollection, render, getEntries } from 'astro:content';
+import { getCollection, render, getEntries, getEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Prose from '../../components/Prose.astro';
 import { Image } from 'astro:assets';
@@ -16,7 +16,11 @@ export async function getStaticPaths() {
 
 // 2. For your template, you can get the entry directly from the prop
 const { project } = Astro.props;
-const topics = await getEntries(project.data.topics);
+const criticalShifts = await getEntries(project.data.criticalShifts);
+
+const allTopics = await Promise.all(criticalShifts.map(shift=> getEntry(shift.data.topic)));
+const topics = [...new Set(allTopics)];
+
 
 const { Content } = await render(project);
 ---
@@ -25,6 +29,7 @@ const { Content } = await render(project);
     {project.data.image && <Image src={project.data.image} alt={project.data.name} class="mt-8 h-24 sm:h-48 w-96 object-contain"/>}
     <h1 class="text-3xl mt-12 mb-4 font-semibold">{project.data.name}</h1>
     <div class="mb-12">
+        {criticalShifts.map(shift => <a href={getUrl(`/topics/${shift.data.topic.id}#${shift.id}`)} class={`rounded-sm inline-block px-2 py-1 border-1`}>{shift.data.name}</a>)}
         {topics.map(topic => <a href={getUrl(`/topics/${topic.id}`)} class={`rounded-sm inline-block px-2 py-1 border-1`}>{topic.data.name}</a>)}
     </div>
     <Prose>

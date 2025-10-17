@@ -1,14 +1,17 @@
 ---
-import { getCollection, render, getEntries } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Prose from '../../components/Prose.astro';
-import ProjectList from '../../components/ProjectList.astro';
+import CriticalShiftList from '../../components/CriticalShiftList.astro';
 
 export async function getStaticPaths() {
   const topics = await getCollection('topics');
+
   return topics.map(topic => ({
     params: { id: topic.id },
-    props: { topic },
+    props: { 
+      topic,
+    },
   }));
 }
 
@@ -22,6 +25,6 @@ const { Content } = await render(topic);
     <Prose>
         <Content />
     </Prose>
-    <h2 class="text-2xl mt-12 mb-8 font-semibold">Projekty</h2>
-    <ProjectList topic={topic.id} showPerex/>
+    <h2 class="text-2xl font-semibold mt-12 mb-8">Co se musí stát?</h2>
+    <CriticalShiftList topicId={topic.id} />
 </Layout>

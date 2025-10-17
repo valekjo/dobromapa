@@ -1,0 +1,31 @@
+---
+import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+import ProjectList from './ProjectList.astro';
+
+interface Props {
+    topicId: string
+}
+
+const { topicId } = Astro.props;
+
+
+const criticalShifts = await getCollection(
+    'criticalShifts',
+    ({data}) => data.topic.id === topicId,
+);
+
+// TODO: Responsive version
+---
+<div class="grid grid-cols-1 gap-4 text-slate-500">
+    {criticalShifts.map(shift => (
+        <div class="transition-all shadow-lg hover:shadow-xl hover:text-slate-700 p-4 rounded-md border-1 border-slate-200" tabindex="0">
+            <a class="grid grid-cols-5 gap-4 items-center" id={shift.id}>
+                <div class="col-span-2">{shift.data.statusQuo}</div>
+                <div class="flex justify-center text-gray-400"><Icon name="mdi:arrow-right" size="32"/></div>
+                <div class="col-span-2">{shift.data.desiredState}</div>
+            </a>
+            <ProjectList criticalShiftId={shift.id}/>
+        </div>
+    ))}
+</div>

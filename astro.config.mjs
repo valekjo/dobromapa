@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
-import mdx from '@astrojs/mdx';
 import icon from 'astro-icon';
 import { BASE_PATH } from './src/utils';
 
@@ -13,5 +12,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  integrations: [mdx(), icon()]
+  integrations: [icon()]
 });

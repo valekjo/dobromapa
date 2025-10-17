@@ -1,7 +1,7 @@
 ---
 name: Moderní sněmovna
 url: https://www.modernisnemovna.cz/
-topics: [ politika ]
+criticalShifts: [ 'sustainability.environment.green_cities' ]
 image: ./moderni-snemovna.svg
 perex: Naším cílem je, aby politika byla srozumitelná a aby do ní vstupovali lidé, kterým dává smysl věnovat svůj čas a zkušenosti této zemi a jejím občanům.
 ---

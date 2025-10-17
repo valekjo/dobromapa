@@ -3,12 +3,16 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import { getUrl } from '../utils';
 
-const { topic } = Astro.props;
+interface Props {
+    criticalShiftId: string
+}
+
+const { criticalShiftId } = Astro.props;
 
 
 const projects = await getCollection(
     'projects',
-    ({data}) => data.topics.some(({id}) => id === topic),
+    ({data}) => data.criticalShifts.some(({id}) => id === criticalShiftId),
 );
 
 ---

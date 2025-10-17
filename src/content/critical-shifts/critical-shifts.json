@@ -1,0 +1,370 @@
+[
+    {
+        "id": "sustainability.cross_cutting.leadership",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Leadership",
+        "statusQuo": "Chybí výrazné a viditelné osobnosti, které by byly ambasadory konstruktivních řešení.",
+        "desiredState": "V každém oboru (politika, byznys, kultura) budou alespoň 2–3 známé osobnosti pravidelně komunikovat pozitivní poselství směrem k řešení ekologických problémů."
+    },
+    {
+        "id": "sustainability.cross_cutting.public_attitudes_eu",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Postoje veřejnosti a vztah k EU",
+        "statusQuo": "50 % veřejnosti nevěří v zelená řešení, nebo je neznají, často kvůli negativnímu postoji vůči EU a nepochopení její role.",
+        "desiredState": "Více než 75 % veřejnosti podporuje zelenou transformaci, chápe důležitost EU a aktivně se podílí na jejím rozhodování."
+    },
+    {
+        "id": "sustainability.cross_cutting.coordination_frameworks",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Koordinace a rámce pro udržitelnost",
+        "statusQuo": "Chybí efektivní koordinační a implementační platformy napříč sektory, neexistují sjednocené rámce pro ESG a udržitelnost",
+        "desiredState": "Vytvoření tematických platforem s mechanismy propojení mezi sektory, sjednocené platformy a jasná koordinace na národní úrovni."
+    },
+    {
+        "id": "sustainability.cross_cutting.social_norms_engagement",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Společenské normy a aktivní zapojení veřejnosti",
+        "statusQuo": "Společnost zaměřená na spotřebu a růst, lidé necítí osobní odpovědnost za změny a nevidí dopad svého úsilí.",
+        "desiredState": "Společnost orientovaná na wellbeing a kvalitu života, veřejnost má motivaci a dostupné možnosti zapojení se do změn."
+    },
+    {
+        "id": "sustainability.cross_cutting.strategy_implementation",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Implementace vládních strategií",
+        "statusQuo": "Strategické dokumenty jsou špatně propojené, plnění cílů není efektivní.",
+        "desiredState": "Propojené strategie s pravidelným monitoringem třetí stranou a otevřeným dialogem mezi sektory."
+    },
+    {
+        "id": "sustainability.cross_cutting.corruption_transparency",
+        "topic": "udrzitelnost",
+        "category": "Průřezové",
+        "name": "Korupce a klientelismus (transparentnost)",
+        "statusQuo": "Rozhodování o klimatických politikách je často ovlivněno úzkými zájmy.",
+        "desiredState": "Politiky řízené vědeckými poznatky a veřejným zájmem, bez vlivu klientelismu."
+    },
+    {
+        "id": "sustainability.industry.industrial_decarbonization",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Dekarbonizace průmyslu a ekonomiky",
+        "statusQuo": "Chybí rámcové podmínky a incentivy pro využívání dekarbonizačních technologií (např. CCS), chybí politická shoda na způsobu dekarbonizace.",
+        "desiredState": "Jasné rámce a dlouhodobá podpora motivující firmy k dekarbonizaci, politická shoda na dlouhodobé strategii napříč vládami."
+    },
+    {
+        "id": "sustainability.industry.raw_materials_self_sufficiency",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Surovinová soběstačnost a využití druhotných materiálů",
+        "statusQuo": "Převážná část surovin v průmyslu (80 %) je dovážena, sekundární suroviny v ČR zůstávají a jsou nevyužité. Průmysl nevyužívá dostatečně druhotné suroviny a nízkoemisní vstupy.",
+        "desiredState": "Zvýšení využití sekundárních a terciálních surovin v průmyslu, podpora cirkulární ekonomiky, průmysl přechází na nízkoemisní vstupy."
+    },
+    {
+        "id": "sustainability.industry.circular_materials_market",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Cirkulární využívání surovin a trh s recyklovanými materiály",
+        "statusQuo": "Chybí rámcové strategie pro jednotlivé materiály a aplikace v průmyslu, nízká poptávka po recyklovaných materiálech.",
+        "desiredState": "Strategická opatření podporující efektivní využití druhotných surovin, veřejné zakázky a státní podpora stimulují trh s recyklovanými materiály."
+    },
+    {
+        "id": "sustainability.industry.esg_strategies",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Udržitelné firemní strategie (ESG)",
+        "statusQuo": "Většina českých firem nechápe význam ESG strategií, což omezuje jejich zavádění.",
+        "desiredState": "Firmy jsou informované, mají ESG strategie, automatizované procesy sběru dat a reporting."
+    },
+    {
+        "id": "sustainability.industry.public_procurement",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Zadávání veřejných zakázek",
+        "statusQuo": "Chybí podpora nízkoemisních materiálů v zadávacích kritériích veřejných zakázek.",
+        "desiredState": "Veřejné zakázky stimulují poptávku po materiálech s vysokým podílem recyklátu a nízkou uhlíkovou stopou."
+    },
+    {
+        "id": "sustainability.industry.decarbonization_investment",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Investice a financování dekarbonizačních technologií",
+        "statusQuo": "Nedostatek financování rizikových investic do nových technologií v průmyslu, neexistují dostatečné investice do dekarbonizačních a čistých technologií.",
+        "desiredState": "Firmy jsou informované, mají ESG strategie, automatizované procesy sběru dat a reporting."
+    },
+    {
+        "id": "sustainability.industry.competitiveness",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Konkurenceschopnost",
+        "statusQuo": "České průmyslové firmy čelí vysokým cenám energií a nedostatku zelené elektřiny.",
+        "desiredState": "Energie v ČR je cenově dostupná, průmysl má dostatek elektřiny z obnovitelných zdrojů."
+    },
+    {
+        "id": "sustainability.industry.import_dependency",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Dovozní závislost",
+        "statusQuo": "Český průmysl je závislý na dovozu čistých technologií (např. solární panely, baterie).",
+        "desiredState": "ČR pokrývá významnou část poptávky po \"clean tech\" v rámci EU a podílí se na jejich výrobě."
+    },
+    {
+        "id": "sustainability.industry.automotive_diversification",
+        "topic": "udrzitelnost",
+        "category": "Průmysl",
+        "name": "Automotive a ekonomická diverzifikace",
+        "statusQuo": "Česká ekonomika je příliš závislá na automotive sektoru.",
+        "desiredState": "Diversifikovaná ekonomika s nižší závislostí na automotive sektoru, větší podpora green tech."
+    },
+    {
+        "id": "sustainability.energy.eu_energy_grid",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Energetická síť EU",
+        "statusQuo": "Současná podpora OZE nebere dostatečně v úvahu geografické podmínky států a přenosová síť není dostatečně propojena, což omezuje efektivní přenos energie",
+        "desiredState": "Evropská síť je komplexně propojena a maximalizuje využití OZE s ohledem na geografické specifikace jednotlivých států"
+    },
+    {
+        "id": "sustainability.energy.energy_decentralization",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Dostupnost a decentralizace energetiky",
+        "statusQuo": "Řešení pro decentralizovanou energetiku jsou finančně nedostupná pro střední a nižší třídu, komunitní energetika je v počátcích",
+        "desiredState": "Decentralizovaná energetika je běžnou součástí trhu, zapojují se do ní jednotlivci, obce i firmy, dostupná i pro nižší příjmové skupiny."
+    },
+    {
+        "id": "sustainability.energy.renewable_infrastructure",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Infrastruktura pro rozvoj OZE",
+        "statusQuo": "Česká republika zaostává v budování infrastruktury pro přenos a distribuci energie z OZE, kapacita elektrizační soustavy nedostačuje.",
+        "desiredState": "Moderní a efektivní infrastruktura plně podporuje rozvoj OZE a jejich napojení do přenosové sítě."
+    },
+    {
+        "id": "sustainability.energy.grid_stability",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Stabilita a modernizace distribuční sítě",
+        "statusQuo": "Distribuční technologie nejsou dostatečně odolné vůči extrémním povětrnostním podmínkám.",
+        "desiredState": "Distribuční síť je modernizována na podzemní kabely, zajišťující stabilní dodávky i při extrémních výkyvech počasí."
+    },
+    {
+        "id": "sustainability.energy.renewable_sustainability",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Udržitelnost OZE s ohledem na životní prostředí",
+        "statusQuo": "Některé OZE jsou považovány za zdroje s negativním dopadem na klima a krajinu.",
+        "desiredState": "Upřednostňovány jsou OZE s minimálním vlivem na krajinu a s reálným bezemisním dopadem, které jsou podporovány jako obnovitelné."
+    },
+    {
+        "id": "sustainability.energy.renewable_permitting",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Politická podpora a povolování OZE",
+        "statusQuo": "Ministerstvo průmyslu outsourcuje přípravu energetické politiky a legislativy, což znevýhodňuje OZE. Povolení pro větrné elektrárny a další OZE trvá 5–10 let.",
+        "desiredState": "Ministerstvo průmyslu má odborné kapacity pro efektivní politiku na podporu OZE, povolovací procesy trvají maximálně 12–18 měsíců."
+    },
+    {
+        "id": "sustainability.energy.renewable_economics",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Ekonomika OZE",
+        "statusQuo": "Investice do fotovoltaiky jsou méně atraktivní kvůli nízké návratnosti.",
+        "desiredState": "Investoři mají jistotu návratnosti investic do fotovoltaiky."
+    },
+    {
+        "id": "sustainability.energy.electricity_market",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Trh s elektřinou",
+        "statusQuo": "Ceny služeb výkonové rovnováhy jsou v ČR vyšší než v ostatních zemích EU.",
+        "desiredState": "Ceny těchto služeb jsou v ČR srovnatelné s ostatními zeměmi EU a trh funguje efektivně."
+    },
+    {
+        "id": "sustainability.energy.renewable_construction",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Výstavba OZE",
+        "statusQuo": "Současný podíl větrných elektráren na energetickém mixu je nízký.",
+        "desiredState": "Větrné elektrárny mají 10% podíl na energetickém mixu ČR."
+    },
+    {
+        "id": "sustainability.energy.local_opposition",
+        "topic": "udrzitelnost",
+        "category": "Energetika",
+        "name": "Lokální odpor vůči energetickým projektům",
+        "statusQuo": "Místní komunity odmítají výstavbu větrných a solárních elektráren kvůli estetickým a environmentálním obavám.",
+        "desiredState": "Komunity jsou plně zapojeny do plánování a podporují výstavbu obnovitelných zdrojů energie."
+    },
+    {
+        "id": "sustainability.circular_economy.circular_legislation",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Legislativní podpora cirkulární ekonomiky",
+        "statusQuo": "Česká legislativa nedostatečně podporuje rozvoj cirkulární ekonomiky.",
+        "desiredState": "Legislativní prostředí přirozeně podporuje udržitelné postupy pro firmy a občany."
+    },
+    {
+        "id": "sustainability.circular_economy.circular_strategies",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Strategie pro cirkulární využívání",
+        "statusQuo": "Chybí rámcové směrnice pro jednotlivé obory a aplikace.",
+        "desiredState": "Strategie pro jednotlivé materiály a obory existují, jsou vypracovány odborníky a podporující cirkulární využívání surovin."
+    },
+    {
+        "id": "sustainability.circular_economy.customer_value_chains",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Změna hodnotových řetězců zákazníků",
+        "statusQuo": "Většina veřejnosti nemá dostatečné info o principech cirkulární ekonomky a jejich zapojení je minimální. Poptávka po udržitelných produktech je minimální.",
+        "desiredState": "Veřejnost je plně informována a aktivně se podílí na fungování cirkulární ekonomiky. S tvorbou poptávky po udržitelných produktech reflektuje nabídku. Lokální zdroje a dodavatelské řetězce jsou preferovány."
+    },
+    {
+        "id": "sustainability.circular_economy.sustainable_product_availability",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Dostupnost a konkurenceschopnost udržitelných produktů",
+        "statusQuo": "Ekologické výrobky a recyklované materiály jsou cenově nekonkurenceschopné, nabídka udržitelných produktů v běžných obchodech je minimální.",
+        "desiredState": "Ekologické výrobky a recyklované materiály jsou cenově dostupné a konkurenceschopné, každý obchod nabízí kvalitní a cenově dostupné odpovědnější produkty."
+    },
+    {
+        "id": "sustainability.circular_economy.waste_material_flows",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Odpady a cirkulární řízení materiálových toků",
+        "statusQuo": "Neexistuje systémová podpora reuse center, data o odpadech nejsou přesná, skládkování odpadu stále dominuje.",
+        "desiredState": "Státní a regionální podpora pro síť reuse center, transparentní systém sběru dat, snížení množství skládkovaného odpadu a posílení recyklace."
+    },
+    {
+        "id": "sustainability.circular_economy.lifecycle_thinking",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Lifecycle thinking",
+        "statusQuo": "Jen 1–5 % firem zohledňuje environmentální stopu během celého životního cyklu produktu.",
+        "desiredState": "Všechny firmy aplikují životní cyklus hodnocení (LCA) jako standardní přístup, na základě jednotných norem a metodik."
+    },
+    {
+        "id": "sustainability.circular_economy.research_development",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Výzkum a vývoj",
+        "statusQuo": "V ČR není podporována excelence ve výzkumu. Systém přiděluje prostředky rovnoměrně místo adekvátní podpory nejlepších výzkumníků v dekarbonizačních technologiích.",
+        "desiredState": "Prioritizace a větší podpora výzkumu a vývoje s potenciálem komercionalizace dekarbonizačních technologií."
+    },
+    {
+        "id": "sustainability.circular_economy.sme_technology_support",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Podpora zavádění udržitelných technologií SMEs",
+        "statusQuo": "Malé a střední podniky nemají zdroje a informace pro implementaci ekologických technologií.",
+        "desiredState": "Udržitelné alternativy jsou dostupné širokému spektru výrobců, včetně malých a středních podniků."
+    },
+    {
+        "id": "sustainability.circular_economy.public_education",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Vzdělání a informovanost veřejnosti o principech cirkulární ekonomiky",
+        "statusQuo": "Většina veřejnosti nemá dostatečné informace o principech cirkulární ekonomiky a jejich zapojení je minimální.",
+        "desiredState": "Veřejnost je plně informována o cirkulární ekonomice a aktivně se podílí na jejím fungování."
+    },
+    {
+        "id": "sustainability.circular_economy.local_supply_chains",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Lokální zdroje/dodavatelské řetězce",
+        "statusQuo": "Globální dodavatelské řetězce jsou křehké, s vysokou uhlíkovou stopou.",
+        "desiredState": "Preferovány jsou lokální zdroje a dodavatelé, uhlíková daň na základě délky přepravy výrobků."
+    },
+    {
+        "id": "sustainability.circular_economy.construction",
+        "topic": "udrzitelnost",
+        "category": "Cirkulární ekonomika",
+        "name": "Stavebnictví",
+        "statusQuo": "Přednost dostávají novostavby před rekonstrukcí stávajících budov, demolice probíhají bez třídění a recyklace materiálů.",
+        "desiredState": "Rekonstrukce a přestavby jsou preferované před novostavbami, demolice probíhají s maximálním tříděním a recyklací."
+    },
+    {
+        "id": "sustainability.environment.river_restoration",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Obnova říční krajiny jako prevence před povodněmi",
+        "statusQuo": "Řeky jsou regulovány, technicky narovnané vodní toky omezují schopnost přirozeného rozlivu (absence niv), to zhoršuje stav při povodních.",
+        "desiredState": "Renaturace říčních niv a obnova přirozených funkcí, včetně lužních lesů, mokřadů. V zastavěném území výstavba s respektem ke krajině s propustnými vrstvami. Průběh povodí je přirozeně zmírněn."
+    },
+    {
+        "id": "sustainability.environment.forest_ecosystem",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Les jako ekosystém",
+        "statusQuo": "Lesy jsou vnímány jako surovina (ekonomický zdroj). Těžba poškozuje krajinu. Těžba i nesystematická výsadba zvyšují emise.",
+        "desiredState": "Lesy jsou vnímány jako multifukční ekosystém, který plní své přirozené funkce, včetně ukládání uhlíku. Těžba je omezena a kompenzována systematickou a smysluplnou obnovou včetně péče."
+    },
+    {
+        "id": "sustainability.environment.sustainable_agriculture",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Podpora šetrného zemědělství",
+        "statusQuo": "Dominance konvenčního zemědělství s hnojivy, pesticidy a monokulturami.",
+        "desiredState": "Převaha regenerativního zemědělství a agrolesnictví s ekosystémovým přístupem. Minimalizace chemizace a těžké mechanizace."
+    },
+    {
+        "id": "sustainability.environment.soil_protection",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Ochrana půdy",
+        "statusQuo": "Černozem je ohrožena před rezidenční a korporátní výstavbou, její ochrana je slabá a nesystematická.",
+        "desiredState": "Bonita půdy je zachována, půda je využívána udržitelně a její znehodnocení je dostatečně a řádně trestáno."
+    },
+    {
+        "id": "sustainability.environment.biodiversity_protection",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Revize podkladů k aktivní ochraně biodiverzity",
+        "statusQuo": "Potřeba revize a aktuálnost seznamu zvláště chráněných druhů.",
+        "desiredState": "Seznam zvláště chráněných druhů je zaktualizován a odpovídá reálnému stavu, a tak může být aktivní účinná ochrana."
+    },
+    {
+        "id": "sustainability.environment.ecosystem_management",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Krajina jako celek a integrovaný ekosystémový management",
+        "statusQuo": "Oddělený přístup ke krajině, kde jednotlivé složky krajiny nejsou vnímány jako propojené celky, a tak neekosystémový přístup k managementu.",
+        "desiredState": "Integrovaný přístup ke krajině, včetně vhodného managementu i ve zvláště chráněných území – přírodě blízký management podporující přirozené funkce ekosystémů a podporu biodiverzity."
+    },
+    {
+        "id": "sustainability.environment.landscape_connectivity",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Obnova propojení krajiny",
+        "statusQuo": "Biocentra, biokoridory a ekodukty jsou často jen na papíře bez realizace. Chybí řádná činnost státní správy při tvorbě a spolupráci územních plánů a vytyčení ÚSES.",
+        "desiredState": "Prioritní výstavba ekoduktů. Jednotná odpovědnost za ÚSES."
+    },
+    {
+        "id": "sustainability.environment.hunting_management",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Myslivost",
+        "statusQuo": "Nadstav zvěře činí obnovu lesů obtížnou a nákladnou",
+        "desiredState": "Tvrdší regulace myslivosti s cílem dosáhnout stavů zvěře podporující obnovu ekosystémů"
+    },
+    {
+        "id": "sustainability.environment.green_cities",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Green cities",
+        "statusQuo": "Překotná výstavba snižuje podíl zeleně ve městech.",
+        "desiredState": "Města s dostatkem zeleně a využívání jejích pozitiv. Smysluplná aplikace krajinného inženýrství při výstavbě + nová výstavba = povinnost % ozelenění"
+    },
+    {
+        "id": "sustainability.environment.invasive_species",
+        "topic": "udrzitelnost",
+        "category": "Environment",
+        "name": "Šíření invazních druhů",
+        "statusQuo": "ČR má jeden z nejvyšších počtů invazních druhů v Evropě",
+        "desiredState": "Vytvoření národního seznamu invazních druhů a jejich systematické odstraňování."
+    }
+]

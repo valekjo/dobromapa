@@ -1,7 +1,7 @@
 ---
 name: Institut cirkulární ekonomiky
 url: https://incien.org/
-topics: [ ekonomika ]
+criticalShifts: [ 'sustainability.environment.green_cities' ]
 image: ./incien.svg
 perex: Naší vizí je prosperující společnost, která šetrně a efektivně nakládá s přírodním bohatstvím.
 ---

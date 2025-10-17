@@ -1,6 +1,6 @@
 ---
 name: Lavička v Horní Lhotě
-topics: [ krajina ]
+criticalShifts: [ 'sustainability.environment.green_cities' ]
 perex: Pěkná, udržovaná
 location: [ 49.1554986, 17.8025803 ]
 ---
