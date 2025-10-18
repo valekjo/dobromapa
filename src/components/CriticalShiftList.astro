@@ -13,7 +13,7 @@ const { criticalShifts } = Astro.props;
 {criticalShifts.map(({category, shifts}) => (
     <h3 class="font-semibold text-xl mb-8 mt-12">{category}</h3>
     <div class="grid grid-cols-1 gap-4 text-slate-500">
-        {shifts.map(shift => (
+        {shifts.map(({shift, projects}) => (
             <div class="transition-all shadow-lg hover:shadow-xl focus:shadow-xl hover:text-slate-700 focus:text-slate-700 p-4 rounded-md border-1 border-slate-200 text-center sm:text-left" tabindex="0">
                 <a class="grid sm:grid-cols-5 sm:gap-4 sm:items-center" id={shift.id}>
                     <div class="sm:col-span-2">{shift.data.statusQuo}</div>
@@ -22,7 +22,7 @@ const { criticalShifts } = Astro.props;
                     </div>
                     <div class="sm:col-span-2">{shift.data.desiredState}</div>
                 </a>
-                <ProjectList criticalShiftId={shift.id} class='border-t-1 border-slate-200 pt-8 mt-8'/>
+                <ProjectList projects={projects} class='border-t-1 border-slate-200 pt-8 mt-8'/>
             </div>
         ))}
     </div>

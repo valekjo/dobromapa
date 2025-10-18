@@ -1,21 +1,17 @@
 ---
 import { Image } from 'astro:assets';
-import { getCollection } from 'astro:content';
 import { getUrl } from '../utils';
+import type { CollectionEntry } from 'astro:content';
 
-// TODO: Change this so the projects are passed in
 interface Props {
-    criticalShiftId: string
+    projects: CollectionEntry<'projects'>[],
     class?: string,
 }
 
-const { criticalShiftId, class: cssClass } = Astro.props;
-
-
-const projects = await getCollection(
-    'projects',
-    ({data}) => data.criticalShifts.some(({id}) => id === criticalShiftId),
-);
+const { 
+    projects,
+    class: cssClass,
+} = Astro.props;
 
 ---
 {projects.length > 0 && <div class={`grid gap-8 sm:gap-4 ${cssClass ?? ''}`}>

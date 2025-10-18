@@ -1,11 +1,24 @@
 import { getCollection, getEntries, getEntry, type CollectionEntry } from "astro:content";
 
+export type ShiftWithProjects = {
+    shift: CollectionEntry<'criticalShifts'>,
+    projects: CollectionEntry<'projects'>[],
+}
+
 export type TopicData = {
     topic: CollectionEntry<'topics'>,
-    criticalShifts: { category: string, shifts: CollectionEntry<'criticalShifts'>[]}[]
+    criticalShifts: { 
+        category: string,
+        shifts: ShiftWithProjects[],
+    }[],
+    /** All projects related to the topic */
+    projects: CollectionEntry<'projects'>[],
 }
 /**
  * Load all data needed to display topic in any way.
+ * 
+ * TODO: Optimize this if needed.
+ * 
  */
 export const getTopicData = async (topic: CollectionEntry<'topics'>): Promise<TopicData> => {
     const criticalShifts = await getCollection(
@@ -13,11 +26,21 @@ export const getTopicData = async (topic: CollectionEntry<'topics'>): Promise<To
         ({data}) => data.topic.id === topic.id,
     );
 
+    const allProjects = new Set<CollectionEntry<'projects'>>();
+
     // Group shifts by category
-    const shiftsByCategory: Record<string, typeof criticalShifts> = {};
+    const shiftsByCategory: Record<string, {
+        shift: CollectionEntry<'criticalShifts'>
+        projects: CollectionEntry<'projects'>[],
+    }[]> = {};
     for(const shift of criticalShifts) {
         if (!shiftsByCategory[shift.data.category]) shiftsByCategory[shift.data.category] = [];
-        shiftsByCategory[shift.data.category].push(shift);
+        const projects = await getCollection(
+            'projects',
+            ({data}) => data.criticalShifts.some(({id}) => id === shift.id),
+        );
+        shiftsByCategory[shift.data.category].push({ shift, projects });
+        projects.forEach((project) => allProjects.add(project))
     }
 
     const data = Object.entries(shiftsByCategory).toSorted().map(([name, shifts]) => ({
@@ -28,6 +51,7 @@ export const getTopicData = async (topic: CollectionEntry<'topics'>): Promise<To
     return {
         topic,
         criticalShifts: data,
+        projects: [...allProjects],
     }
 }
 
