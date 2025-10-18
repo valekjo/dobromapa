@@ -21,7 +21,6 @@ const criticalShifts = await getEntries(project.data.criticalShifts);
 const allTopics = await Promise.all(criticalShifts.map(shift=> getEntry(shift.data.topic)));
 const topics = [...new Set(allTopics)];
 
-
 const { Content } = await render(project);
 ---
 

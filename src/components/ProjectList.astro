@@ -5,9 +5,10 @@ import { getUrl } from '../utils';
 
 interface Props {
     criticalShiftId: string
+    class?: string,
 }
 
-const { criticalShiftId } = Astro.props;
+const { criticalShiftId, class: cssClass } = Astro.props;
 
 
 const projects = await getCollection(
@@ -16,13 +17,17 @@ const projects = await getCollection(
 );
 
 ---
-<div>
+{projects.length > 0 && <div class={`grid gap-8 sm:gap-4 ${cssClass ?? ''}`}>
     {projects.map(project => (
-        <a href={getUrl(`/projects/${project.id}`)} class="flex gap-12 my-4 items-center">
-        {project.data.image
-            ? <Image src={project.data.image} alt={project.data.name} class="h-16 w-32 object-contain"/>
-            : project.data.name}
-        <span>{project.data.perex}</span>
+        <a href={getUrl(`/projects/${project.id}`)} class="grid sm:grid-cols-4 sm:gap-x-8 items-center">
+        <span class="mx-auto sm:mx-0">
+            {project.data.image
+                ? <Image src={project.data.image} alt={project.data.name} class="h-16 w-32 object-contain"/>
+                : project.data.name}
+        </span>
+        <span class="sm:col-span-3">
+            {project.data.perex}
+        </span>
         </a>
     ))}
-</div>
+</div>}

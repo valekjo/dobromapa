@@ -15,17 +15,29 @@ const criticalShifts = await getCollection(
     ({data}) => data.topic.id === topicId,
 );
 
-// TODO: Responsive version
+const shiftsByCategory: Record<string, typeof criticalShifts> = {};
+for(const shift of criticalShifts) {
+    if (!shiftsByCategory[shift.data.category]) shiftsByCategory[shift.data.category] = [];
+    shiftsByCategory[shift.data.category].push(shift);
+}
+
+const data = Object.entries(shiftsByCategory).toSorted();
+
 ---
-<div class="grid grid-cols-1 gap-4 text-slate-500">
-    {criticalShifts.map(shift => (
-        <div class="transition-all shadow-lg hover:shadow-xl hover:text-slate-700 p-4 rounded-md border-1 border-slate-200" tabindex="0">
-            <a class="grid grid-cols-5 gap-4 items-center" id={shift.id}>
-                <div class="col-span-2">{shift.data.statusQuo}</div>
-                <div class="flex justify-center text-gray-400"><Icon name="mdi:arrow-right" size="32"/></div>
-                <div class="col-span-2">{shift.data.desiredState}</div>
-            </a>
-            <ProjectList criticalShiftId={shift.id}/>
-        </div>
-    ))}
-</div>
+{data.map(([name, shifts]) => (
+    <h3 class="font-semibold text-xl mb-8 mt-12">{name}</h3>
+    <div class="grid grid-cols-1 gap-4 text-slate-500">
+        {shifts.map(shift => (
+            <div class="transition-all shadow-lg hover:shadow-xl focus:shadow-xl hover:text-slate-700 focus:text-slate-700 p-4 rounded-md border-1 border-slate-200 text-center sm:text-left" tabindex="0">
+                <a class="grid sm:grid-cols-5 sm:gap-4 sm:items-center" id={shift.id}>
+                    <div class="sm:col-span-2">{shift.data.statusQuo}</div>
+                    <div class="flex justify-center text-gray-400">
+                        <Icon name="mdi:arrow-right" size="32" class="rotate-90 my-2 sm:rotate-0 sm:my-0"/>
+                    </div>
+                    <div class="sm:col-span-2">{shift.data.desiredState}</div>
+                </a>
+                <ProjectList criticalShiftId={shift.id} class='border-t-1 border-slate-200 pt-8 mt-8'/>
+            </div>
+        ))}
+    </div>
+))}
