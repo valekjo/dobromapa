@@ -4,22 +4,23 @@ import Layout from '../../layouts/Layout.astro';
 import Prose from '../../components/Prose.astro';
 import { Image } from 'astro:assets';
 import { getUrl, niceUrl } from '../../utils';
+import { getProjectData } from '../../model/model';
 
-// 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  return projects.map(project => ({
+  return Promise.all(projects.map(async (project) => ({
     params: { id: project.id },
-    props: { project },
-  }));
+    props: { 
+      ...await getProjectData(project),
+    },
+  })));
 }
 
-// 2. For your template, you can get the entry directly from the prop
-const { project } = Astro.props;
-const criticalShifts = await getEntries(project.data.criticalShifts);
-
-const allTopics = await Promise.all(criticalShifts.map(shift=> getEntry(shift.data.topic)));
-const topics = [...new Set(allTopics)];
+const { 
+  project,
+  criticalShifts,
+  topics,
+} = Astro.props;
 
 const { Content } = await render(project);
 ---

@@ -1,31 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { getCollection } from 'astro:content';
 import ProjectList from './ProjectList.astro';
+import type { TopicData } from '../model/model';
 
 interface Props {
-    topicId: string
+    criticalShifts: TopicData['criticalShifts'],
 }
 
-const { topicId } = Astro.props;
-
-
-const criticalShifts = await getCollection(
-    'criticalShifts',
-    ({data}) => data.topic.id === topicId,
-);
-
-const shiftsByCategory: Record<string, typeof criticalShifts> = {};
-for(const shift of criticalShifts) {
-    if (!shiftsByCategory[shift.data.category]) shiftsByCategory[shift.data.category] = [];
-    shiftsByCategory[shift.data.category].push(shift);
-}
-
-const data = Object.entries(shiftsByCategory).toSorted();
+const { criticalShifts } = Astro.props;
 
 ---
-{data.map(([name, shifts]) => (
-    <h3 class="font-semibold text-xl mb-8 mt-12">{name}</h3>
+{criticalShifts.map(({category, shifts}) => (
+    <h3 class="font-semibold text-xl mb-8 mt-12">{category}</h3>
     <div class="grid grid-cols-1 gap-4 text-slate-500">
         {shifts.map(shift => (
             <div class="transition-all shadow-lg hover:shadow-xl focus:shadow-xl hover:text-slate-700 focus:text-slate-700 p-4 rounded-md border-1 border-slate-200 text-center sm:text-left" tabindex="0">

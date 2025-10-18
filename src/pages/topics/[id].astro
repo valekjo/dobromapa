@@ -1,21 +1,28 @@
 ---
 import { getCollection, render } from 'astro:content';
+
 import Layout from '../../layouts/Layout.astro';
 import Prose from '../../components/Prose.astro';
 import CriticalShiftList from '../../components/CriticalShiftList.astro';
+import { getTopicData } from '../../model/model';
 
 export async function getStaticPaths() {
   const topics = await getCollection('topics');
 
-  return topics.map(topic => ({
-    params: { id: topic.id },
-    props: { 
-      topic,
-    },
+  return await Promise.all(topics.map(async (topic) => {
+    return {
+      params: { id: topic.id },
+      props: {
+        ...await getTopicData(topic),
+      },
+    };
   }));
 }
 
-const { topic } = Astro.props;
+const { 
+  topic,
+  criticalShifts,
+} = Astro.props;
 
 const { Content } = await render(topic);
 ---
@@ -26,5 +33,5 @@ const { Content } = await render(topic);
         <Content />
     </Prose>
     <h2 class="text-2xl font-semibold mt-12 mb-8">Co se musí stát?</h2>
-    <CriticalShiftList topicId={topic.id} />
+    <CriticalShiftList criticalShifts={criticalShifts} />
 </Layout>
