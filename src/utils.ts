@@ -1,3 +1,5 @@
+// TODO: We'll need to get rid of this eventually
+
 export const BASE_PATH = '/dobromapa';
 
 export const niceUrl = (url: string) => url.replace(/^https?:\/\//, '').replace(/\/$/, '');

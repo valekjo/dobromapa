@@ -22,14 +22,13 @@ const projectToMarkdown = (project: CollectionEntry<'projects'>, { baseUrl }: Op
 
 const shiftToTableRow = ({ shift, projects }: ShiftWithProjects, options: Options) => {
   const projectsList = projects.map(project => project.data.name).join(', ');
-  return `| ${shift.data.statusQuo} | ${shift.data.desiredState} | ${projectsList} |`
+  return `| ${shift.data.name} | ${shift.data.statusQuo} | ${shift.data.desiredState} | ${projectsList} |`
 }
 
 const shiftsToTable = (data: ShiftWithProjects[], options: Options) => {
   const body = data.map((entry) => shiftToTableRow(entry, options)).join('\n');
-  return `| Status quo | Cílový stav | Projekty |\n|---|---|---|\n${body}`; 
+  return `| Název | Status quo | Cílový stav | Projekty |\n|---|---|---|---|\n${body}`; 
 }
-
 
 
 export async function GET({ site, props }: APIContext<TopicData>) {
