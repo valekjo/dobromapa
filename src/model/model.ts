@@ -68,11 +68,15 @@ export const getProjectData = async (project: CollectionEntry<'projects'>): Prom
     const criticalShifts = await getEntries(project.data.criticalShifts);
 
     const allTopics = await Promise.all(criticalShifts.map(shift=> getEntry(shift.data.topic)));
-    const topics = [...new Set(allTopics)];
+    const topics: Record<string, CollectionEntry<'topics'>> = {};
+    for (const topic of allTopics) {
+        topics[topic.id] = topic;
+    }
+    
 
     return {
         project,
         criticalShifts,
-        topics,
+        topics: Object.values(topics),
     }
 }
